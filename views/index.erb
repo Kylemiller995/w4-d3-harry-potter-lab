@@ -4,6 +4,7 @@
   <p>Second Name: <%= student.second_name() %></p>
   <p>House: <%=student.house()["name"]%></p>
   <p>Age: <%= student.age() %></p>
+  <p><a href="/students/<%= student.id %>/edit">edit</a></p>
   <hr />
   <% end %>
 </div>

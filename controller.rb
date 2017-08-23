@@ -25,7 +25,20 @@ post '/students' do
   redirect to '/students'
 end
 
+
+get '/students/:id/edit' do
+  @student = Student.find(params['id'])
+  @houses = House.all
+  erb(:edit)
+end
+
+post 'students:/id' do
+  @student = Student.new(params)
+  @student.update
+  redirect to "/students"
+end
+
+
 get '/home' do
   erb(:home)
-
 end
